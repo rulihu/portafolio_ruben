@@ -1,0 +1,504 @@
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.header-container {
+    position: fixed;/*adicion*/
+    box-sizing: border-box;/*adicion*/
+    width: 99%;/*adicion*/
+    /*height: 100%;adicion*/
+    /*top: 0;adicion*/
+    /*left: 0;adicion*/
+    padding: 5px 30px 5px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: transparent;*/
+    background-color:#0C0D0D;
+    font-weight: 700;
+    color: white;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+}
+header img {
+    /*padding-right: 6px;*/
+    width: 50px;
+    height: 40px;
+    background-color: rgb(59, 148, 175);;
+}
+header h4 {
+    font-size: 30px;
+    padding: 0px 5px;
+    margin: 10px 0px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.menu-list {
+    display: flex;
+    justify-content: space-around;
+    width: 750px;
+}
+.menu-list a {
+    color: white;
+    color:rgb(59, 148, 175);
+}
+.menu-list li{
+    list-style: none;
+}
+.abrir-menu, 
+.cerrar-menu { 
+    display: none;/*esconde el boton al principio*/
+}
+@media screen and (max-width:789px){
+    .abrir-menu,
+    .cerrar-menu { 
+        display: block;
+        /*border: 0;*/
+        font-size: 30px;
+        background-color: transparent;
+        color: rgb(59, 148, 175);
+        cursor: pointer;
+    }
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: flex-start;
+        /*gap: 2rem;*/
+        top: 1;
+        /*right: 0;*/
+        left: 70%;/*con est da pero al parece lo maneja al inverso*/
+        /*bottom: 0;*/
+        background-color: #0C0D0D;
+        padding-left: 0rem;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);
+    }
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu-list { 
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    .header-container { 
+        /*width: 70%;*/
+    }
+}
+/*----------------------------------------------------------*/
+main {
+    padding-top: 70px;
+}
+.sobre-mi-contenedor {
+    display: flex;
+    flex-direction: row;/*column*/
+    justify-content: space-around;/*center*/
+    flex-wrap: wrap;/*a*/
+    align-items: center;
+    margin: auto auto;
+    background-color: #161818;
+}
+.foto-perfil {
+    border-radius: 50%;
+    /*height: 150px;
+    width: 150px;*/
+    height: 350px;
+    width: 280px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+.texto p{
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+.texto h2{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+/*efecto maquina de escribir*/
+.maquina-escribir {
+    font-size: 2.7rem;
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 13ch;
+    color: rgb(59, 148, 175);
+    animation: typing 3s steps(13) infinite, blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+/*.maquina-escribir {
+    background: yellow;
+    position: relative;
+}
+.maquina-escribir::after {
+    content: "";
+    border-left: 3px solid rgb(139, 6, 6);
+    background: white;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    animation: maquinaescribir 2s infinite alternate steps(14);
+}
+@keyframes maquinaescribir {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}*/
+/*end efecto maquina de escribi*/
+.redes-sociales{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redes-sociales li{
+    margin: 0 10px;
+    font-size: 40px;
+}
+.redes-sociales span {
+    color: rgb(59, 148, 175);
+}
+
+/*----------------------------------------------------------*/
+.aboud {
+    padding: 40px 40px;
+    background-color: #f6f6f6;
+    margin: 0.8rem 0;
+}
+.aboud h2 {
+   color: #333;
+   padding-left: 14%;
+   font-size: 41px;
+   font-weight: 700;
+   margin: 10px; 
+}
+.sobre-mi-content {
+    max-width: 960px;
+    margin: 20px auto; 
+}
+.sobre-mi-image {
+    padding-top: 30px;
+    text-align: left;
+}
+/*----------------------------------------------------------*/
+.skills {
+    margin: 2rem 0;
+    padding: 60px 0;
+    text-align: center;
+}
+.skills h2 {
+    color: #333;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+/*Ini clases usadas por java scrip*/
+.efecto {
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+.transform_right{transform: translateX(-20%);}
+.aparece {
+    opacity: 1;
+    transform: none;
+}
+/*End clases usadas por java scrip*/
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+.skill{
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.skill:hover {
+    transform: scale(1.1);
+}
+.skill-icon {
+    font-size: 2.5em;
+    width: 50px;
+    height: 50px;
+    margin: 20px auto 10px auto;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.html {
+    color: red;
+}
+.css3 {
+    color: #3495DD;
+}
+/*----------------------------------------------------------*/
+.hobbies {
+    padding: 60px 0;
+    text-align: center;
+    margin: 2rem 0;
+}
+.hobbies h2 {
+    color: #333;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.hobbies-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.hobby {
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.hobby:hover {
+    transform: scale(1.1);
+}
+.hobby p {
+    margin: 0;
+    bottom: 5px;
+    position: absolute;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+.hobby-icon {
+    font-size: 1.5rem;
+}
+/*----------------------------------------------------------*/
+.formaciones {
+    background-color: #f7f7f7;
+    padding: 80px 0;
+}
+.formaciones-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.formaciones h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: #333;
+}
+.formacion img {
+    width: 150px;
+    height: 150px;
+    border-radius: 30%;
+    margin: 40px auto;
+    /*display: block;*/
+}
+.formacion {
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 40px;
+}
+.formacion h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.formacion p {
+    font-size: 16px;
+    color: #888;
+}
+/*----------------------------------------------------------*/
+#experiencia {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+}
+#experiencia h2 {
+    color: #333;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+.experiencia-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.proyecto {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+.proyecto img {
+    width: 100%;
+    height: auto;
+}
+.proyecto h5 {
+    font-size: 20px;
+    margin: 20px;
+    color: #333;
+    font-weight: bold;
+}
+.proyecto p {
+    font-size: 16px;
+    margin: 0 20px 20px;
+    color: #333;
+}
+.btns {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.demo-btn, .repositorio-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+button a {
+    text-decoration: none;
+}
+/*----------------------------------------------------------*/
+#contacto {
+    background-color: #f8f8f8;
+    padding: 50px;
+    text-align: center;
+}
+/*form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}*/
+#contacto h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+#contacto form {
+    display: inline-block;
+    text-align: left;
+}
+#contacto label {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+#contacto input, #contacto textarea {
+    /*border: 2px solid #ccc;*/
+    box-shadow: 4px 4px 26px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 25px;
+    resize: none;
+    border: none;
+    outline: none;
+}
+#contacto textarea {
+    outline: none;
+    height: 60px;
+}
+/*#contacto button[type="submit"] {*/
+#contacto button {
+    background-color: #3598E1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 50px;
+    font-size: 16px;
+    cursor: pointer;
+    justify-content: center;
+    /*transition: all 0.3s ease;*/
+}
+#contacto button:hover{
+    transform: scale(1.1);
+}
+/*-----------------------------------------------------------*/
+footer {
+    color: white;
+    /*background-color: #f8f8f8;*/
+    background-color: #0C0D0D;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
